@@ -1,0 +1,100 @@
+/* public/css/style.css */
+
+body {
+    font-family: sans-serif;
+    background-color: pink;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    color: #444;
+    text-align: center;
+    margin-bottom: 1em;
+}
+h1 {
+    font-size: 50px;
+    color: #e83e8c;
+}
+
+h2 {
+    font-size: 25px;
+    
+}
+
+h3 {
+    font-size: 15px;
+    /* 少し小さめ */
+}
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+.button-area {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-area button {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+    padding: 10px;
+    font-size: 1em;
+    background-color: #e83e8c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* aリンクはボタン風にせず、中央揃え＋余白だけ */
+.button-area a {
+    display: block;
+    margin-top: 10px;
+    color: #2196F3;
+    text-decoration: underline;
+    font-size: 0.95em;
+}
+
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px;
+}

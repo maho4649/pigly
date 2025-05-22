@@ -14,7 +14,7 @@
 
 
 ## 使用技術
-PHP 8.2.28  
+PHP 8.1 
 Laravel Framework 8.83.29  
 mysql  Ver 9.2.0 for macos15.2 on arm64 (Homebrew)  
   
@@ -45,3 +45,44 @@ phpMyAdmin:http://localhost:8080
 /login  
 ログアウト  
 /logout  
+
+
+┌────────────┐
+│   users    │
+├────────────┤
+│ id         │ PK
+│ name       │
+│ email      │
+│ password   │
+│ created_at │
+│ updated_at │
+└────────────┘
+      │
+      │ 1
+      │
+      ▼
+┌────────────────┐
+│  weight_logs    │
+├────────────────┤
+│ id             │ PK
+│ user_id        │ FK → users.id
+│ date           │
+│ weight         │
+│ calories       │
+│ exercise_time  │
+│ exercise_content │
+│ created_at     │
+│ updated_at     │
+└────────────────┘│
+      │ 2
+      │
+      ▼
+┌──────────────┐
+│   goals      │
+├──────────────┤
+│ id           │ PK
+│ user_id      │ FK → users.id
+│ target_weight│    │
+│ created_at   │
+│ updated_at   │
+└──────────────┘
