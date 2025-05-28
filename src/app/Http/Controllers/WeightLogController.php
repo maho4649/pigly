@@ -25,13 +25,17 @@ class WeightLogController extends Controller
     
       $logs = $query->orderBy('date', 'desc')->paginate(10)->withQueryString();
   
-      $latestWeight = WeightLog::where('user_id', $userId)
+      $latestWeightEntry = WeightLog::where('user_id', $userId)
           ->orderBy('date', 'desc')
-          ->first()?->weight ?? 0;
+          ->first();
+
+      $latestWeight = $latestWeightEntry ? $latestWeightEntry->weight : 0;
   
-      $targetWeight = WeightTarget::where('user_id', $userId)
+      $targetWeightEntry = WeightTarget::where('user_id', $userId)
           ->orderBy('updated_at', 'desc')
-          ->first()?->target_weight ?? 60;
+          ->first();
+
+      $targetWeight = $targetWeightEntry ? $targetWeightEntry->target_weight : 60;
   
       return view('weight_logs.index', compact('logs', 'targetWeight', 'latestWeight'));
   }
